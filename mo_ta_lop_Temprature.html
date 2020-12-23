@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temprature</title>
+</head>
+<body>
+<script>
+    let Temprature = function (C) {
+        this.doC = C;
+        if (C < -273) {
+            alert("nhap lai do C");
+        } else {
+            this.doC = C;
+        }
+        this.swapCtoF = function () {
+            return (this.doC * 5 / 9) + 32;
+        }
+        this.swapCtoK = function () {
+            return this.doC + 273.15;
+        }
+    }
+    let doc = new Temprature(parseInt(prompt("nhap do C: ")));
+    alert(doc.swapCtoF());
+    alert(doc.swapCtoK());
+</script>
+</body>
+</html>
