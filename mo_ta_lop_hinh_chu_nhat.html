@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mo ta lop hinh chu nhat</title>
+</head>
+<body>
+<img id="hinhchunhat" src="1280px-Rectangle_Geometry_Vector.svg.png" width="216" height="266" alt="hinh" >
+<script>
+    let Rectangle = function (heigth, width) {
+        this.height = heigth;
+        this.width = width;
+        this.getHeigth = function () {
+            return this.height;
+        }
+        this.getWidth = function () {
+            return this.width;
+        }
+        this.getChuvi = function () {
+            return (this.height + this.width) * 2;
+        }
+        this.getDientich = function () {
+            return this.height * this.width;
+        }
+        this.hienthihinhchunhat = function () {
+            document.getElementById("hinhchunhat");
+        }
+    };
+    let rectangle = new Rectangle(parseInt(prompt("nhap heigth: ")), parseInt(prompt("nhap width: ")));
+    let chuvi = rectangle.getChuvi();
+    let dientich = rectangle.getDientich();
+    alert("chu vi: " + chuvi  + ", dientich: " + dientich);
+    rectangle.hienthihinhchunhat()
+
+
+
+</script>
+</body>
+</html>
